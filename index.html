@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasikumar-jada - DevSecOps & Cloud Portfolio</title>
+    <!-- We'll use Tailwind CSS for clean, professional styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <!-- Favicon - a small but professional touch. Replace with your own. -->
+    <link rel="icon" href="https://placehold.co/32x32/3b82f6/white?text=YN" type="image/png">
+</head>
+<body class="bg-sky-50 font-sans text-zinc-800">
+
+    <!-- 
+      HEADER & NAVIGATION
+      - Add your name and links to your LinkedIn/GitHub.
+      - GitHub is NON-NEGOTIABLE for a DevOps role. It's your resume.
+    -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Your Name/Brand -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-blue-600"> Sasikumar Jada </a>
+                </div>
+                <!-- Navigation Links -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#about" class="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">About Me</a>
+                        <a href="#skills" class="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Skills</a>
+                        <a href="#projects" class="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Projects</a>
+                        <a href="#certs" class="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Certifications</a>
+                        <a href="#contact" class="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300">Contact</a>
+                    </div>
+                </div>
+                <!-- Social Links (Desktop) -->
+                <div class="hidden md:block">
+                    <div class="ml-4 flex items-center md:ml-6 space-x-2">
+                        <!-- GitHub Icon -->
+                        <a href="https://github.com/Sasikumarjada" target="_blank" class="text-slate-400 hover:text-slate-600 p-1 transition-colors duration-300" aria-label="GitHub">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.5.499.09.682-.217.682-.483 0-.237-.008-.865-.013-1.699-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.074 1.531 1.03 1.531 1.03.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.82c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <!-- LinkedIn Icon -->
+                        <a href="https://www.linkedin.com/in/sasikumar-jada/" target="_blank" class="text-slate-400 hover:text-slate-600 p-1 transition-colors duration-300" aria-label="LinkedIn">
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11.26 19.49h-3.23v-10.72h3.23v10.72zm-1.61-12.05c-1.01 0-1.83-.82-1.83-1.83s.82-1.83 1.83-1.83 1.83.82 1.83 1.83-.82 1.83-1.83 1.83zm13.13 12.05h-3.23v-5.2c0-1.24-.02-2.83-1.73-2.83-1.73 0-1.99 1.35-1.99 2.74v5.29h-3.23v-10.72h3.1v1.42h.04c.43-.82 1.48-1.68 3.06-1.68 3.28 0 3.88 2.16 3.88 4.97v6.01z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button (Optional, for smaller screens if needed) -->
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 
+          HERO SECTION
+          - This is your first impression.
+          - State clearly who you are and what you do.
+          - Use keywords: "DevOps", "Cloud", "Automation", "CI/CD".
+        -->
+        <section id="hero" class="bg-white-100">
+            <div class="max-w-7xl mx-auto py-20 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center">
+                <!-- Left Column (Text) -->
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                    <h1 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl">
+                        <span class="block">Hi, I'm Sasikumar Jada</span>
+                        <span class="block bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-700">DevSecOps & Cloud Engineer</span>
+                    </h1>
+                    <p class="mt-3 text-base text-slate-600 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        Passionate about automating infrastructure, optimizing pipelines, and building scalable systems on the cloud. Let's build the future, reliably.
+                    </p>
+                    <div class="mt-5 sm:mt-8 sm:flex sm:justify-center md:justify-start">
+                        <div class="rounded-md shadow">
+                            <a href="#projects" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                View My Projects
+                            </a>
+                        </div>
+                        <div class="mt-3 sm:mt-0 sm:ml-3">
+                            <a href="https://docs.google.com/document/d/1QRX_2jnnD30mMO8cUKpskCYNLvPRGFwkrSj13WcX94w/edit?tab=t.0" target="_blank" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200 md:py-4 md:text-lg md:px-10 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                                Download Resume
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right Column (Image) - Replace this with a professional photo of yourself -->
+                <div class="md:w-1/2 flex justify-center">
+                    <img class="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full object-cover shadow-2xl transform transition-transform duration-500 hover:scale-105" src="https://media.licdn.com/dms/image/v2/D5635AQHD8uHZbOBDNA/profile-framedphoto-shrink_400_400/B56Zn1kShUI8Ac-/0/1760761555620?e=1763802000&v=beta&t=Le01B98H-NSh-puzvIMMPUmTlV4DIYOZ2WN6slcGlcg" alt="A professional photo of [Your Name]">
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          ABOUT ME SECTION
+          - Add a 2-3 paragraph summary of your background and passion.
+          - Why DevOps? Why cloud? What problems do you like to solve?
+        -->
+        <section id="about" class="py-20 bg-sky-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">About Me</h2>
+                    <p class="mt-4 text-lg text-slate-600">
+                        A brief introduction to who I am.
+                    </p>
+                </div>
+                <div class="mt-12 max-w-3xl mx-auto text-lg text-slate-700 space-y-6">
+                    <p>
+                        Hello! I'm Sasikumar JAda , a recently completed B.tech (AIML) with a deep passion for cloud computing and automation. My journey started when I realized that the real challenge isn't just writing code, but deploying, managing, and scaling it efficiently and reliably.
+                    </p>
+                    <p>
+                        I'm driven by the "automate everything" mindset. I enjoy diving into tools like Terraform to build infrastructure from code, containerizing applications with Docker, orchestrating them with Kubernetes, and building robust CI/CD pipelines to make development seamless.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          SKILLS SECTION
+          - This is the most important section for a recruiter.
+          - List the specific technologies you know. Be honest.
+          - Group them logically.
+        -->
+        <section id="skills" class="py-20 bg-white-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Technical Skills</h2>
+                    <p class="mt-4 text-lg text-slate-600">
+                        Tools and technologies I'm experienced with.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Category 1: Cloud Platforms -->
+                    <div class="bg-slate-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <h3 class="text-2xl font-semibold text-slate-900 mb-4">Cloud Platforms</h3>
+                        <ul class="space-y-3 text-slate-700">
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l5 5L20 7"></path></svg>
+                                <strong>Amazon Web Services (AWS):</strong> EC2, S3, VPC, IAM, EKS, Elastic Beanstalk
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l5 5L20 7"></path></svg>
+                                <strong>Google Cloud Platform (GCP):</strong> GKE, Compute Engine, Cloud Storage
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 2: Containerization & IaC -->
+                    <div class="bg-slate-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <h3 class="text-2xl font-semibold text-slate-900 mb-4">IaC & Containerization</h3>
+                        <ul class="space-y-3 text-slate-700">
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l5 5L20 7"></path></svg>
+                                <strong>Terraform:</strong> Writing modules, managing state, provisioning resources.
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l5 5L20 7"></path></svg>
+                                <strong>Docker:</strong> Dockerfiles, Docker Compose, image optimization.
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l5 5L20 7"></path></svg>
+                                <strong>Kubernetes (K8s):</strong> Pods, Services, Deployments, basic Helm charts.
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l5 5L20 7"></path></svg>
+                                <strong>Ansible:</strong> Writing playbooks for configuration management.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 3: CI/CD & Scripting -->
+                    <div class="bg-slate-50 p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <h3 class="text-2xl font-semibold text-slate-900 mb-4">CI/CD & Scripting</h3>
+                        <ul class="space-y-3 text-slate-700">
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l5 5L20 7"></path></svg>
+                                <strong>Jenkins:</strong> Building pipelines, using plugins.
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l5 5L20 7"></path></svg>
+                                <strong>GitLab CI:</strong> Writing `.gitlab-ci.yml` files, managing runners.
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l5 5L20 7"></path></svg>
+                                <strong>Python:</strong> Automation scripts (e.g., with Boto3), scripting for apps.
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="h-6 w-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12l5 5L20 7"></path></svg>
+                                <strong>Bash Scripting:</strong> Automating server tasks and pipeline stages.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          SOFT SKILLS SECTION
+          - Added as requested.
+          - Highlights the collaborative and cultural aspects of DevOps.
+        -->
+        <section id="soft-skills" class="py-20 bg-white-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Soft Skills</h2>
+                    <p class="mt-4 text-lg text-slate-600">
+                        The cultural and collaborative side of my skillset.
+                    </p>
+                </div>
+                <div class="mt-12 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <h3 class="text-xl font-semibold text-slate-900 mb-3">Communication & Collaboration</h3>
+                        <p class="text-slate-700">I excel at bridging the gap between development and operations, translating technical requirements, and documenting processes clearly.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <h3 class="text-xl font-semibold text-slate-900 mb-3">Problem-Solving</h3>
+                        <p class="text-slate-700">I have a systematic approach to troubleshooting, from identifying root causes in complex systems to implementing resilient fixes.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <h3 class="text-xl font-semibold text-slate-900 mb-3">Adaptability & Eagerness to Learn</h3>
+                        <p class="text-slate-700">The cloud landscape changes daily. I am a quick learner, constantly exploring new tools and methodologies to stay current.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <h3 class="text-xl font-semibold text-slate-900 mb-3">Ownership & Accountability</h3>
+                        <p class="text-slate-700">I take full ownership of my work, from the initial commit to its performance in production, and believe in a "you build it, you run it" mindset.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          PROJECTS SECTION
+          - THIS IS WHERE YOU PROVE YOUR SKILLS.
+          - Have 3-4 solid projects.
+          - For each project:
+            1. A clear title.
+            2. A 2-3 sentence description of the *problem* and the *solution*.
+            3. A list of technologies used (keywords!).
+            4. A link to the GitHub repo. The repo MUST have a good README.md.
+        -->
+        <section id="projects" class="py-20 bg-white-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">My Projects</h2>
+                    <p class="mt-4 text-lg text-slate-600">
+                        Here are a few things I've built.
+                    </p>
+                </div>
+
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Project 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <img src="https://private-user-images.githubusercontent.com/173983966/505824290-4d556d2a-09dc-43c1-ab0e-c1bd04d17890.jpeg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjMxOTIxNjAsIm5iZiI6MTc2MzE5MTg2MCwicGF0aCI6Ii8xNzM5ODM5NjYvNTA1ODI0MjkwLTRkNTU2ZDJhLTA5ZGMtNDNjMS1hYjBlLWMxYmQwNGQxNzg5MC5qcGVnP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MTExNSUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTExMTVUMDczMTAwWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9OWRkZDM5MGVlOWE3M2I1NzMxODVlZTlkY2FkM2FmNTI4YTIyODYxOGI5MzJkYzVkZTk3ZWEyOWViNTkyZDgyNiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.kK2LLQ4Lutts2v046C7gn0PMFL3DVmdQ8WRKSrrFF-s" alt="Project 1 Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-semibold text-slate-900 mb-2">CI/CD Pipeline for a Web App</h3>
+                            <p class="text-slate-700 mb-4">
+                                Built an automated CI/CD pipeline for a Python Flask application. The pipeline automatically builds, tests (with Pytest), and deploys the application to AWS Elastic Beanstalk upon a push to the main branch.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Trivy</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Docker</span>
+                                <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-full">AWS</span>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">SonarQube</span>
+                                <span class="bg-blue-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Jenkins</span>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-slate-50">
+                            <a href="https://github.com/Sasikumarjada/Netflix-Landing-Page?tab=readme-ov-file" target="_blank" class="font-medium text-blue-600 hover:text-blue-700 transition-colors duration-300">View on GitHub &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <img src="https://private-user-images.githubusercontent.com/173983966/505825484-a640509a-efd6-414a-ab2a-35c2e54eeb79.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NjMxOTIzMzYsIm5iZiI6MTc2MzE5MjAzNiwicGF0aCI6Ii8xNzM5ODM5NjYvNTA1ODI1NDg0LWE2NDA1MDlhLWVmZDYtNDE0YS1hYjJhLTM1YzJlNTRlZWI3OS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUxMTE1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MTExNVQwNzMzNTZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05MDY3ODYxOGRkNzNlYzliN2E5ZjY0ZTRkZGViN2E2ODQxMzNkNWY5YjY3ODZlMjBjZWRlY2Q0ODc2MmJjNTUwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.5SHQb5DhZ-4OLI5FoqDonGx-gftDY2WpwcRpv2HPYiY" alt="Project 2 Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-semibold text-slate-900 mb-2">Smart Housing Price Estimator</h3>
+                            <p class="text-slate-700 mb-4">
+                                The Smart Housing Price Estimator is an end-to-end Machine Learning project designed to predict the market price of a house based on key factors like location, square footage, number of bedrooms, and amenities.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Python</span>
+                                <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Pandas,Numpy</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">HTML,CSS,JavaScript</span>
+                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Flask</span>
+                                <span class="bg-red-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Machine Learning</span>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-slate-50">
+                            <a href="https://github.com/Sasikumarjada/Smart-house-price-predictor" target="_blank" class="font-medium text-blue-600 hover:text-blue-700 transition-colors duration-300">View on GitHub &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <img src="https://placehold.co/600x400/ec4899/white?text=Project+3+Screenshot" alt="Project 3 Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow">
+                            <h3 class="text-xl font-semibold text-slate-900 mb-2">K8s Deployment of Microservices</h3>
+                            <p class="text-slate-700 mb-4">
+                                Containerized a simple "voting" microservices application using Docker and deployed it to a 3-node Kubernetes cluster (on GKE/EKS). Wrote manifest files for Deployments, Services, and Persistent Volumes.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Kubernetes</span>
+                                <span class="bg-gray-100 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Docker</span>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">GCP</span>
+                                <span class="bg-pink-100 text-pink-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Microservices</span>
+                            </div>
+                        </div>
+                        <div class="p-6 bg-slate-50">
+                            <a href="https://github.com/[your-username]/[repo-name]" target="_blank" class="font-medium text-blue-600 hover:text-blue-700 transition-colors duration-300">View on GitHub &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          CERTIFICATIONS SECTION
+          - For entry-level, certs are a HUGE advantage.
+          - They show you are serious and have foundational knowledge.
+          - Link to your Credly/CertMetrics badge.
+        -->
+        <section id="certs" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Certifications</h2>
+                    <p class="mt-4 text-lg text-slate-600">
+                        My formal credentials and learning achievements.
+                    </p>
+                </div>
+                
+                <div class="mt-12 max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Certification 1 -->
+                    <a href="https://www.theforage.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_gwo53b3vr7jjsCusL_1754280180764_completion_certificate.pdf" target="_blank" class="block p-6 bg-slate-50 rounded-lg shadow-md hover:shadow-xl transition-all duration-30D hover:-translate-y-2">
+                        <img src="https://placehold.co/100x100/e0e7ff/3b82f6?text=AWS+Badge" alt="AWS Certification Badge" class="h-16 w-16 mb-4">
+                        <h3 class="text-xl font-semibold text-slate-900">AWS - Solutions Architecture Job Simulation</h3>
+                        <p class="text-slate-600">the forage</p>
+                        <p class="text-sm text-blue-600 mt-2">View Credential &rarr;</p>
+                    </a>
+
+                    <!-- Certification 2 -->
+                    <a href="https://www.kaggle.com/certification/badges/sasikumarjada/30" target="_blank" class="block p-6 bg-slate-50 rounded-lg shadow-md hover:shadow-xl transition-all duration-30D hover:-translate-y-2">
+                        <img src="https://media.licdn.com/dms/image/v2/D562DAQErKSJU-Mq_SA/profile-treasury-image-shrink_480_480/B56ZqF23a.HIAM-/0/1763182348967?e=1763798400&v=beta&t=dW0zB0LA9XdGwKPYifuSJjYewKcD5E17-X99z8mZWww" alt="CKA Badge" class="h-16 w-16 mb-4">
+                        <h3 class="text-xl font-semibold text-slate-900">Python Coder</h3>
+                        <p class="text-slate-600">Kaggle</p>
+                        <p class="text-sm text-blue-600 mt-2">View Credential &rarr;</p>
+                    </a>
+                    
+                    <!-- Add more as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 
+          CONTACT SECTION
+          - A simple form.
+          - You can use a free service like Formspree or Netlify Forms.
+          - I've just added the HTML structure.
+        -->
+        <section id="contact" class="py-20 bg-white-50">
+            <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h2 class="text-3xl font-extrabold text-slate-900 sm:text-4xl">Get In Touch</h2>
+                    <p class="mt-4 text-lg text-slate-600">
+                        I'm open to new opportunities. Let's talk.
+                    </p>
+                </div>
+                <div class="mt-12">
+                    <!-- 
+                      IMPORTANT: To make this form work, you can use a free service:
+                      1. Go to https://formspree.io/
+                      2. Create an account and a new form.
+                      3. Replace "YOUR_FORMSPREE_ENDPOINT" with your unique URL.
+                    -->
+                    <form action="https://formspree.io/f/mnnldwjg" method="POST" class="grid grid-cols-1 gap-y-6">
+                        <div>
+                            <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 
+      FOOTER
+      - Simple, with your name and social links again.
+    -->
+    <footer class="bg-white">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center space-x-6">
+                <!-- GitHub Icon -->
+                <a href="https://github.com/Sasikumarjada" target="_blank" class="text-slate-400 hover:text-slate-500" aria-label="GitHub">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.5.499.09.682-.217.682-.483 0-.237-.008-.865-.013-1.699-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.074 1.531 1.03 1.531 1.03.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.82c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                    </svg>
+                </a>
+                <!-- LinkedIn Icon -->
+                <a href="https://www.linkedin.com/in/sasikumar-jada/" target="_blank" class="text-slate-400 hover:text-slate-500" aria-label="LinkedIn">
+                    <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11.26 19.49h-3.23v-10.72h3.23v10.72zm-1.61-12.05c-1.01 0-1.83-.82-1.83-1.83s.82-1.83 1.83-1.83 1.83.82 1.83 1.83-.82 1.83-1.83 1.83zm13.13 12.05h-3.23v-5.2c0-1.24-.02-2.83-1.73-2.83-1.73 0-1.99 1.35-1.99 2.74v5.29h-3.23v-10.72h3.1v1.42h.04c.43-.82 1.48-1.68 3.06-1.68 3.28 0 3.88 2.16 3.88 4.97v6.01z" />
+                    </svg>
+                </a>
+            </div>
+            <p class="mt-8 text-center text-base text-slate-400">
+                &copy; 2025 Sasikumar. Built with Tailwind CSS.
+            </p>
+        </div>
+    </footer>
+
+
+    <!-- 
+      LIVE CHAT WIDGET
+      - This is the "help chat" you requested.
+      - It's a simulated chat. It shows your JS skills and is a nice interactive touch.
+    -->
+    
+    <!-- Chat Button -->
+    <button id="chat-button" class="fixed bottom-4 right-4 bg-blue-600 p-4 rounded-full shadow-lg text-white hover:bg-blue-700 transition-transform hover:scale-110 duration-300">
+        <!-- Chat Icon -->
+        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+        </svg>
+    </button>
+
+    <!-- Chat Window (Hidden by default) -->
+    <div id="chat-window" class="fixed bottom-16 right-4 w-80 h-96 bg-white rounded-lg shadow-xl flex flex-col transition-all duration-300 ease-out opacity-0 scale-95 pointer-events-none">
+        <!-- Header -->
+        <div class="bg-blue-600 text-white p-4 rounded-t-lg flex justify-between items-center">
+            <h3 class="font-semibold">Chat with Sasi</h3>
+            <button id="close-chat" class="text-white hover:text-blue-100 text-2xl leading-none">&times;</button>
+        </div>
+        
+        <!-- Messages -->
+        <div id="chat-messages" class="flex-grow p-4 space-y-4 overflow-y-auto">
+            <!-- Initial Bot Message -->
+            <div class="flex">
+                <div class="bg-slate-200 text-slate-800 p-3 rounded-lg max-w-xs">
+                    <p>Hi there! Thanks for visiting my portfolio. Feel free to ask a question or leave a message. I'll get an email notification!</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Input -->
+        <div class="p-4 bg-slate-100 rounded-b-lg flex">
+            <input id="chat-input" type="text" placeholder="Type your message..." class="flex-grow rounded-l-md border-slate-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 p-2 disabled:bg-slate-200">
+            <button id="send-button" class="bg-blue-600 text-white p-2 rounded-r-md hover:bg-blue-700 disabled:bg-blue-400 w-20">Send</button>
+        </div>
+    </div>
+
+
+    <!-- JavaScript for the Chat -->
+    <script>
+        // --- Formspree Endpoint for Chat ---
+        // IMPORTANT: Create a NEW Formspree form and set its destination
+        // email to sasikumarjada2004@gmail.com.
+        const CHAT_FORMSPREE_ENDPOINT = "https://formspree.io/f/[YOUR_NEW_CHAT_ENDPOINT]";
+
+        const chatButton = document.getElementById('chat-button');
+        const chatWindow = document.getElementById('chat-window');
+        const closeChat = document.getElementById('close-chat');
+        const sendButton = document.getElementById('send-button');
+        const chatInput = document.getElementById('chat-input');
+        const chatMessages = document.getElementById('chat-messages');
+
+        // Toggle chat window
+        chatButton.addEventListener('click', () => {
+            chatWindow.classList.toggle('opacity-0');
+            chatWindow.classList.toggle('scale-95');
+            chatWindow.classList.toggle('pointer-events-none');
+        });
+
+        // Close chat window
+        closeChat.addEventListener('click', () => {
+            chatWindow.classList.add('opacity-0');
+            chatWindow.classList.add('scale-95');
+            chatWindow.classList.add('pointer-events-none');
+        });
+
+        const addBotMessage = (message) => {
+            const botMessageBubble = document.createElement('div');
+            botMessageBubble.className = 'flex';
+            botMessageBubble.innerHTML = `
+                <div class="bg-slate-200 text-slate-800 p-3 rounded-lg max-w-xs">
+                    <p>${message}</p>
+                </div>
+            `;
+            chatMessages.appendChild(botMessageBubble);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        };
+
+        // Handle sending a message
+        const handleSendMessage = async () => {
+            const message = chatInput.value.trim();
+            if (message === '') return;
+
+            // 1. Add user's message to chat
+            const userMessageBubble = document.createElement('div');
+            userMessageBubble.className = 'flex justify-end';
+            userMessageBubble.innerHTML = `
+                <div class="bg-blue-600 text-white p-3 rounded-lg max-w-xs">
+                    <p>${message}</p>
+                </div>
+            `;
+            chatMessages.appendChild(userMessageBubble);
+
+            // 2. Clear the input and disable form
+            chatInput.value = '';
+            chatInput.disabled = true;
+            sendButton.disabled = true;
+            sendButton.innerHTML = `<svg class="animate-spin h-5 w-5 mx-auto text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>`;
+
+            // 3. Scroll to bottom
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+
+            // 4. Send message to Formspree
+            try {
+                const response = await fetch(CHAT_FORMSPREE_ENDPOINT, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        chatMessage: message,
+                        source: "Portfolio Chat"
+                    }),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    addBotMessage("Thanks for your message! I've received it and will get back to you soon at <strong>sasikumarjada2004@gmail.com</strong>.");
+                } else {
+                    throw new Error('Failed to send message.');
+                }
+
+            } catch (error) {
+                console.error('Chat send error:', error);
+                addBotMessage("Sorry, something went wrong. Please email me directly at <strong>sasikumarjada2004@gmail.com</strong>.");
+            } finally {
+                // 5. Re-enable form
+                chatInput.disabled = false;
+                sendButton.disabled = false;
+                sendButton.innerHTML = "Send";
+                chatInput.focus();
+            }
+        };
+
+        sendButton.addEventListener('click', handleSendMessage);
+
+        // Also send on 'Enter' key
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleSendMessage();
+            }
+        });
+    </script>
+</body>
+</html>
