@@ -7,7 +7,7 @@
 
 A clean, responsive, single-page portfolio showcasing DevSecOps, Cloud, CI/CD and related projects. Built with plain HTML and Tailwind CSS. Includes a lightweight simulated chat widget (Formspree-backed) and links to GitHub / LinkedIn and project repos.
 
-
+https://github.com/Sasikumarjada/Portfoilo1/blob/main/Screenshot%202025-11-18%20122128.png?raw=true
 
 ## 🔎 Demo / Preview
 Open `index.html` in a browser or deploy to any static host (GitHub Pages, Netlify, Vercel).
